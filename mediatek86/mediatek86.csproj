@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CAAF5F41-5DE2-4EF2-9658-02621530BEC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>mediatek86</RootNamespace>
+    <AssemblyName>mediatek86</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 9.3\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Absence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Absence.Designer.cs">
+      <DependentUpon>Absence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AjouterPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AjouterPersonnel.Designer.cs">
+      <DependentUpon>AjouterPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\GererPersonnel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\GererPersonnel.Designer.cs">
+      <DependentUpon>GererPersonnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\modifierAbsence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\modifierAbsence.Designer.cs">
+      <DependentUpon>modifierAbsence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ModifierPersonne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModifierPersonne.Designer.cs">
+      <DependentUpon>ModifierPersonne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PageConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PageConnection.Designer.cs">
+      <DependentUpon>PageConnection.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Absence.resx">
+      <DependentUpon>Absence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AjouterPersonnel.resx">
+      <DependentUpon>AjouterPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GererPersonnel.resx">
+      <DependentUpon>GererPersonnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\modifierAbsence.resx">
+      <DependentUpon>modifierAbsence.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bddmanager\" />
+    <Folder Include="controler\" />
+    <Folder Include="dal\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
