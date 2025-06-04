@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bddmanager\BddManager.cs" />
+    <Compile Include="controler\mediatekControler.cs" />
     <Compile Include="dal\absenceAccess.cs" />
     <Compile Include="dal\Access.cs" />
     <Compile Include="dal\motifAccess.cs" />
@@ -127,6 +128,12 @@
     <EmbeddedResource Include="View\modifierAbsence.resx">
       <DependentUpon>modifierAbsence.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ModifierPersonne.resx">
+      <DependentUpon>ModifierPersonne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PageConnection.resx">
+      <DependentUpon>PageConnection.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,8 +147,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controler\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

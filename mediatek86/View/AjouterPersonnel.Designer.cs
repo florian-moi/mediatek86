@@ -51,7 +51,7 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(800, 150);
+            this.panelHeader.Size = new System.Drawing.Size(823, 134);
             this.panelHeader.TabIndex = 0;
             // 
             // labelTitle
@@ -163,6 +163,7 @@
             this.buttonAjouter.TabIndex = 12;
             this.buttonAjouter.Text = "Ajouter";
             this.buttonAjouter.UseVisualStyleBackColor = true;
+            this.buttonAjouter.Click += new System.EventHandler(this.buttonAjouter_Click);
             // 
             // buttonAnnuler
             // 
@@ -173,12 +174,13 @@
             this.buttonAnnuler.TabIndex = 13;
             this.buttonAnnuler.Text = "Annuler";
             this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // AjouterPersonnel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(823, 600);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelNom);
@@ -195,6 +197,7 @@
             this.Controls.Add(this.buttonAnnuler);
             this.Name = "AjouterPersonnel";
             this.Text = "Ajouter une personne";
+            this.Load += new System.EventHandler(this.AjouterPersonnel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

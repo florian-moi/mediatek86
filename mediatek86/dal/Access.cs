@@ -7,6 +7,9 @@ using mediatek86.bddManager;
 
 namespace mediatek86.dal
 {
+    ///<summary>
+    /// Classe d'accès aux données, Singleton pour la gestion de la connexion à la base de données.
+    /// </summary>
     public class Access
     {
         private static readonly String connection = "Server=localhost;DataBase=mediatek;User=root;PassWord=";
@@ -15,6 +18,7 @@ namespace mediatek86.dal
 
         public BddManager Manager { get; }
 
+       
         private Access()
         {
             try
@@ -27,7 +31,9 @@ namespace mediatek86.dal
 
             }
         }
-
+        /// <summary>
+        /// Retourne l'instance unique de la classe Access (Singleton).
+        /// </summary>
         public static Access GetInstance()
         {
             if (instance == null)

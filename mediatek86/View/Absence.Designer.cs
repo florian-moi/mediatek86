@@ -37,8 +37,12 @@ namespace mediatek86.View
             this.lblAbsence = new System.Windows.Forms.Label();
             this.cbAbsence = new System.Windows.Forms.ComboBox();
             this.btnSupprimer = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.modifbutton = new System.Windows.Forms.Button();
             this.groupNouvelleAbs.SuspendLayout();
             this.groupSupprAbs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -47,23 +51,23 @@ namespace mediatek86.View
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(686, 156);
+            this.panelHeader.Size = new System.Drawing.Size(1028, 156);
             this.panelHeader.TabIndex = 0;
             // 
             // panelFooter
             // 
             this.panelFooter.BackColor = System.Drawing.Color.SteelBlue;
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooter.Location = new System.Drawing.Point(0, 613);
+            this.panelFooter.Location = new System.Drawing.Point(0, 679);
             this.panelFooter.Name = "panelFooter";
-            this.panelFooter.Size = new System.Drawing.Size(686, 118);
+            this.panelFooter.Size = new System.Drawing.Size(1028, 52);
             this.panelFooter.TabIndex = 1;
             // 
             // lblTitre
             // 
             this.lblTitre.AutoSize = true;
             this.lblTitre.Font = new System.Drawing.Font("Segoe UI", 22F);
-            this.lblTitre.Location = new System.Drawing.Point(154, 173);
+            this.lblTitre.Location = new System.Drawing.Point(366, 159);
             this.lblTitre.Name = "lblTitre";
             this.lblTitre.Size = new System.Drawing.Size(331, 41);
             this.lblTitre.TabIndex = 2;
@@ -79,7 +83,7 @@ namespace mediatek86.View
             this.groupNouvelleAbs.Controls.Add(this.cbMotif);
             this.groupNouvelleAbs.Controls.Add(this.btnAjouter);
             this.groupNouvelleAbs.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupNouvelleAbs.Location = new System.Drawing.Point(24, 369);
+            this.groupNouvelleAbs.Location = new System.Drawing.Point(122, 416);
             this.groupNouvelleAbs.Name = "groupNouvelleAbs";
             this.groupNouvelleAbs.Size = new System.Drawing.Size(300, 217);
             this.groupNouvelleAbs.TabIndex = 3;
@@ -141,6 +145,7 @@ namespace mediatek86.View
             this.btnAjouter.Size = new System.Drawing.Size(103, 31);
             this.btnAjouter.TabIndex = 6;
             this.btnAjouter.Text = "Ajouter";
+            this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
             // groupSupprAbs
             // 
@@ -148,16 +153,16 @@ namespace mediatek86.View
             this.groupSupprAbs.Controls.Add(this.cbAbsence);
             this.groupSupprAbs.Controls.Add(this.btnSupprimer);
             this.groupSupprAbs.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupSupprAbs.Location = new System.Drawing.Point(393, 430);
+            this.groupSupprAbs.Location = new System.Drawing.Point(519, 416);
             this.groupSupprAbs.Name = "groupSupprAbs";
-            this.groupSupprAbs.Size = new System.Drawing.Size(257, 156);
+            this.groupSupprAbs.Size = new System.Drawing.Size(446, 112);
             this.groupSupprAbs.TabIndex = 4;
             this.groupSupprAbs.TabStop = false;
             this.groupSupprAbs.Text = "Supprimer absence";
             // 
             // lblAbsence
             // 
-            this.lblAbsence.Location = new System.Drawing.Point(13, 35);
+            this.lblAbsence.Location = new System.Drawing.Point(4, 31);
             this.lblAbsence.Name = "lblAbsence";
             this.lblAbsence.Size = new System.Drawing.Size(86, 22);
             this.lblAbsence.TabIndex = 0;
@@ -168,24 +173,57 @@ namespace mediatek86.View
             this.cbAbsence.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAbsence.Items.AddRange(new object[] {
             "Absence"});
-            this.cbAbsence.Location = new System.Drawing.Point(96, 28);
+            this.cbAbsence.Location = new System.Drawing.Point(86, 28);
             this.cbAbsence.Name = "cbAbsence";
-            this.cbAbsence.Size = new System.Drawing.Size(155, 29);
+            this.cbAbsence.Size = new System.Drawing.Size(354, 29);
             this.cbAbsence.TabIndex = 1;
             // 
             // btnSupprimer
             // 
-            this.btnSupprimer.Location = new System.Drawing.Point(86, 78);
+            this.btnSupprimer.Location = new System.Drawing.Point(8, 69);
             this.btnSupprimer.Name = "btnSupprimer";
             this.btnSupprimer.Size = new System.Drawing.Size(103, 32);
             this.btnSupprimer.TabIndex = 2;
             this.btnSupprimer.Text = "Supprimer";
+            this.btnSupprimer.Click += new System.EventHandler(this.btnSupprimer_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(280, 203);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(554, 207);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(23, 636);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "retour";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // modifbutton
+            // 
+            this.modifbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.modifbutton.Location = new System.Drawing.Point(519, 546);
+            this.modifbutton.Name = "modifbutton";
+            this.modifbutton.Size = new System.Drawing.Size(155, 32);
+            this.modifbutton.TabIndex = 7;
+            this.modifbutton.Text = "modifier une absence";
+            this.modifbutton.UseVisualStyleBackColor = true;
+            this.modifbutton.Click += new System.EventHandler(this.modifbutton_Click);
             // 
             // Absence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 731);
+            this.ClientSize = new System.Drawing.Size(1028, 731);
+            this.Controls.Add(this.modifbutton);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.lblTitre);
@@ -193,9 +231,11 @@ namespace mediatek86.View
             this.Controls.Add(this.groupSupprAbs);
             this.Name = "Absence";
             this.Text = "Absence";
+            this.Load += new System.EventHandler(this.Absence_Load);
             this.groupNouvelleAbs.ResumeLayout(false);
             this.groupNouvelleAbs.PerformLayout();
             this.groupSupprAbs.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +258,8 @@ namespace mediatek86.View
         private Label lblAbsence;
         private ComboBox cbAbsence;
         private Button btnSupprimer;
+        private DataGridView dataGridView1;
+        private Button button1;
+        private Button modifbutton;
     }
 }

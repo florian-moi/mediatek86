@@ -60,6 +60,12 @@ namespace mediatek86.bddManager
             command.ExecuteNonQuery();
         }
 
+        /// <summary>
+        /// Exécution d'une requête de type "select" et récupération des résultats
+        /// </summary>
+        /// <param name="stringQuery"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
         public List<object[]> ReqSelect(string stringQuery, Dictionary<string, object> parameters = null)
         {
             MySqlCommand command = new MySqlCommand(stringQuery, connection);

@@ -51,6 +51,7 @@
             this.lblMotif = new System.Windows.Forms.Label();
             this.cbMotif = new System.Windows.Forms.ComboBox();
             this.btnModifier = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panelHeader
@@ -59,16 +60,16 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(800, 120);
+            this.panelHeader.Size = new System.Drawing.Size(686, 104);
             this.panelHeader.TabIndex = 0;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.lblTitle.Location = new System.Drawing.Point(250, 140);
+            this.lblTitle.Location = new System.Drawing.Point(214, 121);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(240, 37);
+            this.lblTitle.Size = new System.Drawing.Size(221, 37);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Modifier absence";
             // 
@@ -76,9 +77,9 @@
             // 
             this.lblChoisirAbs.AutoSize = true;
             this.lblChoisirAbs.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblChoisirAbs.Location = new System.Drawing.Point(100, 210);
+            this.lblChoisirAbs.Location = new System.Drawing.Point(86, 182);
             this.lblChoisirAbs.Name = "lblChoisirAbs";
-            this.lblChoisirAbs.Size = new System.Drawing.Size(124, 21);
+            this.lblChoisirAbs.Size = new System.Drawing.Size(126, 21);
             this.lblChoisirAbs.TabIndex = 2;
             this.lblChoisirAbs.Text = "Choisir absence :";
             // 
@@ -86,54 +87,53 @@
             // 
             this.cbAbsence.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAbsence.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic);
-            this.cbAbsence.Location = new System.Drawing.Point(250, 210);
+            this.cbAbsence.Location = new System.Drawing.Point(214, 182);
             this.cbAbsence.Name = "cbAbsence";
-            this.cbAbsence.Size = new System.Drawing.Size(200, 25);
+            this.cbAbsence.Size = new System.Drawing.Size(172, 25);
             this.cbAbsence.TabIndex = 3;
+            this.cbAbsence.SelectedIndexChanged += new System.EventHandler(this.cbAbsence_SelectedIndexChanged);
             // 
             // lblDebut
             // 
             this.lblDebut.AutoSize = true;
             this.lblDebut.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblDebut.Location = new System.Drawing.Point(100, 260);
+            this.lblDebut.Location = new System.Drawing.Point(86, 225);
             this.lblDebut.Name = "lblDebut";
-            this.lblDebut.Size = new System.Drawing.Size(92, 21);
+            this.lblDebut.Size = new System.Drawing.Size(93, 21);
             this.lblDebut.TabIndex = 4;
             this.lblDebut.Text = "Date début :";
             // 
             // txtDebut
             // 
             this.txtDebut.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic);
-            this.txtDebut.Location = new System.Drawing.Point(250, 260);
+            this.txtDebut.Location = new System.Drawing.Point(214, 225);
             this.txtDebut.Name = "txtDebut";
-            this.txtDebut.Size = new System.Drawing.Size(200, 25);
+            this.txtDebut.Size = new System.Drawing.Size(172, 25);
             this.txtDebut.TabIndex = 5;
-           // this.txtDebut.PlaceholderText = "dd-MM-YYYY";
             // 
             // lblFin
             // 
             this.lblFin.AutoSize = true;
             this.lblFin.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblFin.Location = new System.Drawing.Point(100, 310);
+            this.lblFin.Location = new System.Drawing.Point(86, 269);
             this.lblFin.Name = "lblFin";
-            this.lblFin.Size = new System.Drawing.Size(75, 21);
+            this.lblFin.Size = new System.Drawing.Size(71, 21);
             this.lblFin.TabIndex = 6;
             this.lblFin.Text = "Date fin :";
             // 
             // txtFin
             // 
             this.txtFin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic);
-            this.txtFin.Location = new System.Drawing.Point(250, 310);
+            this.txtFin.Location = new System.Drawing.Point(214, 269);
             this.txtFin.Name = "txtFin";
-            this.txtFin.Size = new System.Drawing.Size(200, 25);
+            this.txtFin.Size = new System.Drawing.Size(172, 25);
             this.txtFin.TabIndex = 7;
-            //this.txtFin.PlaceholderText = "dd-MM-YYYY";
             // 
             // lblMotif
             // 
             this.lblMotif.AutoSize = true;
             this.lblMotif.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lblMotif.Location = new System.Drawing.Point(100, 360);
+            this.lblMotif.Location = new System.Drawing.Point(86, 312);
             this.lblMotif.Name = "lblMotif";
             this.lblMotif.Size = new System.Drawing.Size(54, 21);
             this.lblMotif.TabIndex = 8;
@@ -143,25 +143,37 @@
             // 
             this.cbMotif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMotif.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic);
-            this.cbMotif.Location = new System.Drawing.Point(250, 360);
+            this.cbMotif.Location = new System.Drawing.Point(214, 312);
             this.cbMotif.Name = "cbMotif";
-            this.cbMotif.Size = new System.Drawing.Size(200, 25);
+            this.cbMotif.Size = new System.Drawing.Size(172, 25);
             this.cbMotif.TabIndex = 9;
             // 
             // btnModifier
             // 
             this.btnModifier.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnModifier.Location = new System.Drawing.Point(250, 410);
+            this.btnModifier.Location = new System.Drawing.Point(90, 355);
             this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(120, 30);
+            this.btnModifier.Size = new System.Drawing.Size(103, 26);
             this.btnModifier.TabIndex = 10;
             this.btnModifier.Text = "Modifier";
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(214, 358);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "annuler";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // modifierAbsence
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 480);
+            this.ClientSize = new System.Drawing.Size(686, 416);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblChoisirAbs);
@@ -175,9 +187,13 @@
             this.Controls.Add(this.btnModifier);
             this.Name = "modifierAbsence";
             this.Text = "Modifier absence";
+            this.Load += new System.EventHandler(this.modifierAbsence_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
+
+        private System.Windows.Forms.Button button1;
     }
     #endregion
 }

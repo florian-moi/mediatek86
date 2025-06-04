@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace mediatek86.Model
 {
+
     public class absence
     {
 
@@ -29,5 +30,9 @@ namespace mediatek86.Model
         public DateTime datefin { get; set; }
         public int idmotif { get; set; }
 
+        public override string ToString()
+        {
+            return $"Absence du {datedebut.ToShortDateString()} au {datefin.ToShortDateString()}";
+        }
     }
 }

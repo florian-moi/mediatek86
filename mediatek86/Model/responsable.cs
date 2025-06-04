@@ -8,6 +8,11 @@ namespace mediatek86.Model
 {
     public class responsable
     {
+        /// <summary>
+        /// constructeur de la classe responsable
+        /// </summary>
+        /// <param name="login"></param>
+        /// <param name="pwd"></param>
         public responsable(string login,string pwd)
         {
             this.login = login;
